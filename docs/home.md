@@ -1,4 +1,4 @@
-# Introduction
+# Documentation Introduction
 
 <!-- except for headlines, all contents need to be modified -->
 
@@ -11,7 +11,7 @@ introduce DML,INSERT - Used to add data to tables. UPDATE - Used to edit data in
 & querying a database using the SELECT statement. clauses like SELECT FROM WHERE GROUP BY HAVING ORDER BY;
 -->
 
-The goal of this document is to serve as an introduction to some of the SQL commands that Relational Databases share.
+The goal of this document is to serve as an introduction to basic SQL commands that Relational Databases share.
 
 ## Intended Users
 
@@ -20,7 +20,7 @@ The goal of this document is to serve as an introduction to some of the SQL comm
 - Beginner to intermediate developers who need to setup a backend for a personal project.
 - Software development teams working on small or medium-sized web applications.
 
-## Software Installation
+## Software Requirements
 
 ## Prepersuite knowledges
 
@@ -30,4 +30,10 @@ Up to this point you should be able to perform the following tasks using the MyS
 - Entity Relationship Diagrams
 - Add primary keys and foreign keys
 - Add constraints to tables
+
+## Procedures Overview
+
+TOC of this documentation
+
+## Typographical Conventions
 

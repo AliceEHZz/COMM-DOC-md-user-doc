@@ -1,7 +1,7 @@
 site_name: SQL Introduction
 nav:
   - Home: "home.md"
-  - Introduction: "SQLintroduction.md"
+  - Introduction to SQL: "SQLintroduction.md"
   - DDL: "DDL.md"
   - DML: "DML.md"
   - DQL: "DQL.md"
