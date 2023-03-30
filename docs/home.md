@@ -1,14 +1,10 @@
 # Documentation Introduction
 
-<!-- except for headlines, all contents need to be modified -->
-
-<!-- This documentation would include: SELECTs lab in week 5 and week 6 lab -->
-
-<!-- introduce DDL (CREATE, ALTER AND DROP)
-
-introduce DML,INSERT - Used to add data to tables. UPDATE - Used to edit data in tables. DELETE - Used to remove data from tables.
-
-& querying a database using the SELECT statement. clauses like SELECT FROM WHERE GROUP BY HAVING ORDER BY;
+<!-- 
+- Explains software’s intended use
+- Identifies intended user & knowledge level
+- Shows conventions used in document
+- States what instructions are for 
 -->
 
 The goal of this document is to serve as an introduction to basic SQL commands that Relational Databases share.

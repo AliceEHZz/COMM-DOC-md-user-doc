@@ -1,6 +1,6 @@
 # Data Definition Language (DDL)
 
-In this section, we will cover SQL DDL (Data Definition Language) commands, which are used to create, alter, and drop database objects such as tables, indexes, and constraints. We will go over the following SQL DDL commands:
+In this section, we will cover SQL DDL (Data Definition Language) commands, which are used to create, alter, and drop database objects such as tables, indexes, and constraints. We will go over the following SQL DDL commands and create a new database and a new table:
 
 - CREATE
 - ALTER
@@ -23,6 +23,11 @@ Follow the steps below and let's
    - If you just want to run a single command you can use the Cursor Execute button (insert icon). This button will only run the single command where the keyboard cursor is. The keyboard shortcut for this is CTRL + Enter on Windows or CMD+Enter (⌘+Enter) on Mac.
 
 2. Type **CREATE DATABASE intro_to_sql;** in the query
+
+```sql
+CREATE DATABASE intro_to_sql;
+```
+
 3. Click Execute icon.
 
    **insert image**
@@ -32,17 +37,20 @@ Follow the steps below and let's
 4. Click the refresh icon to confirm the new database is added to your database list.
    **insert image**
 
+5. set the new database as default blablabla
+
 Now we have a new database created. In the following example, we will create a table named "customers" with four columns: "id", "name", "email", and "age".
 
 1. Copy and paste the commands below to your query.
 
 ```sql
-CREATE TABLE customers (
-   id INT PRIMARY KEY,
-   name VARCHAR(50) NOT NULL,
-   email VARCHAR(50),
-   age INT
-);
+CREATE TABLE `change this to new database`.`employees` (
+  `EMP_ID` INT NOT NULL AUTO_INCREMENT,
+  `EMP_FNAME` VARCHAR(45) NOT NULL,
+  `EMP_LNAME` VARCHAR(45) NOT NULL,
+  `EMP_SALARY` INT NOT NULL,
+  `EMP_BONUS` INT NOT NULL,
+  PRIMARY KEY (`EMP_ID`));
 ```
 
 **insert little reference inside code!**
