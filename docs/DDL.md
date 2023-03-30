@@ -14,14 +14,29 @@ The CREATE command is used to create new database objects such as tables, indexe
 
 Follow the steps below and let's
 
-1. Go to the "File" Menu on the left corner of your Workbench and then click on "New Query Tab". This will give us a query text window where we can type our SQL commands and run them using the Execute button: . If a specific command is selected, then only that command is executed. If no commands are selected, all the commands in the query window are run.
-   - If you just want to run a single command you can use the Cursor Execute button (insert icon). This button will only run the single command where the keyboard cursor is. The keyboard shortcut for this is CTRL + Enter on Windows or CMD+Enter (⌘+Enter) on Mac.
-2. Type **CREATE DATABASE intro_to_sql;** in the query
-3. Click Execute icon here.
-4. After you execute you should see this message on the bottom:
-5. Confirm that you created your new database by refreshing your database list and seeing if your database is listed.
+1. Go to the "File" Menu on the left corner of your Workbench and then click on "New Query Tab".
 
-```
+   **insert image**
+
+   This will give us a query text window where we can type our SQL commands and run them using the Execute button: . If a specific command is selected, then only that command is executed. If no commands are selected, all the commands in the query window are run.
+
+   - If you just want to run a single command you can use the Cursor Execute button (insert icon). This button will only run the single command where the keyboard cursor is. The keyboard shortcut for this is CTRL + Enter on Windows or CMD+Enter (⌘+Enter) on Mac.
+
+2. Type **CREATE DATABASE intro_to_sql;** in the query
+3. Click Execute icon.
+
+   **insert image**
+
+   After you execute you should see this message on the bottom:
+
+4. Click the refresh icon to confirm the new database is added to your database list.
+   **insert image**
+
+Now we have a new database created. In the following example, we will create a table named "customers" with four columns: "id", "name", "email", and "age".
+
+1. Copy and paste the commands below to your query.
+
+```sql
 CREATE TABLE customers (
    id INT PRIMARY KEY,
    name VARCHAR(50) NOT NULL,
@@ -30,13 +45,19 @@ CREATE TABLE customers (
 );
 ```
 
+**insert little reference inside code!**
+
+The "id" column is the primary key, and the "name" column is required (NOT NULL).
+
+1. Click Execute icon.
+
 In this example, we are creating a table named "customers" with four columns: "id", "name", "email", and "age". The "id" column is the primary key, and the "name" column is required (NOT NULL).
 
 ## ALTER Command
 
 The ALTER command is used to modify the structure of existing database objects such as tables, indexes, and constraints. Here's an example of altering a table using the ALTER command:
 
-```
+```sql
 ALTER TABLE customers ADD address VARCHAR(50);
 ```
 
@@ -44,7 +65,7 @@ ALTER TABLE customers ADD address VARCHAR(50);
 
 The DROP command is used to remove existing database objects such as databases, tables, indexes, and constraints. Here's an example of dropping a database using the DROP command:
 
-```
+```sql
 DROP TABLE customers;
 ```
 
