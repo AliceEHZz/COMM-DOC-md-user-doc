@@ -1,16 +1,16 @@
 # Data Definition Language (DDL)
 
-In this section, we will cover SQL DDL (Data Definition Language) commands, which are used to create, alter, and drop database objects such as tables, indexes, and constraints. We will go over the following SQL DDL commands and create a new database and a new table:
+In this section, we will cover the DDL commands, which are used to create, alter, and drop databases, tables, indexes and constraints. We will go over the following SQL DDL commands and create a new database and a new table:
 
 - CREATE
 - ALTER
 - DROP
 
-By the end of this section, you will have a good understanding of how to use these commands to manage your database structure effectively. Let's open MySQL Workbench get started!
+By the end of this section, you will have a good understanding of how to use these commands to manage your database structure effectively. Let's open MySQL Workbench and get started!
 
 ## CREATE Command
 
-The CREATE command is used to create new database objects such as tables, indexes, and constraints. Instead of creating a database by clicking on "New Schema" using mouse, this time we will use CREATE command in query script.
+The CREATE command is used to create new objects in sql such as tables, indexes, and constraints. Instead of creating a database by clicking on "New Schema" using mouse, this time we will use CREATE command in query script.
 
 Follow the steps below and let's
 
