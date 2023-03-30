@@ -15,8 +15,8 @@ theme:
     # Light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue grey
-      accent: orange
+      primary: indigo
+      accent: blue
       toggle:
         icon: material/weather-sunny
         name: Dark mode
@@ -24,8 +24,8 @@ theme:
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: orange
-      accent: deep purple
+      primary: lime
+      accent: teal
       toggle:
         icon: material/weather-night
         name: Light mode
@@ -50,3 +50,20 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - tables
+
+markdown_extensions:
+- pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+- pymdownx.inlinehilite
+- pymdownx.snippets
+- pymdownx.superfences
+
+markdown_extensions:
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+
+
+
