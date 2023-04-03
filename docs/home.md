@@ -9,9 +9,10 @@
 
 The goal of this document is to serve as an introduction to basic SQL commands that Relational Databases share.
 
-SQL is blablabla
+SQL, or Structured Query Language, is a programming language used to manage and manipulate relational databases. With SQL, you can create, update, and delete data in databases, as well as retrieve data for analysis and reporting. SQL is widely used in industries such as finance, healthcare, and e-commerce, and is a valuable skill for anyone working with data. In this documentation, you will learn the basics of SQL syntax and how to perform common operations on a database using SQL.
 
-simple intro to categories. 
+
+We will cover some different types of SQL commands such us DDL, DML, and DQL. Please follow the instruction and try those out!
 
 ## Intended Users
 

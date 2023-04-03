@@ -44,13 +44,7 @@ Now we have a new database created. In the following example, we will create a t
 1. Copy and paste the commands below to your query.
 
 ```sql
-CREATE TABLE `change this to new database`.`employees` (
-  `EMP_ID` INT NOT NULL AUTO_INCREMENT,
-  `EMP_FNAME` VARCHAR(45) NOT NULL,
-  `EMP_LNAME` VARCHAR(45) NOT NULL,
-  `EMP_SALARY` INT NOT NULL,
-  `EMP_BONUS` INT NOT NULL,
-  PRIMARY KEY (`EMP_ID`));
+
 ```
 
 **insert little reference inside code!**

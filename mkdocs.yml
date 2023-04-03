@@ -1,6 +1,6 @@
 site_name: SQL Introduction
 nav:
-  - Home: "home.md"
+  - Home: "index.md"
   - Introduction to SQL: "SQLintroduction.md"
   - DDL: "DDL.md"
   - DML: "DML.md"
@@ -15,8 +15,8 @@ theme:
     # Light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: blue
+      primary: blue grey
+      accent: orange
       toggle:
         icon: material/weather-sunny
         name: Dark mode
@@ -24,8 +24,8 @@ theme:
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: lime
-      accent: teal
+      primary: orange
+      accent: deep purple
       toggle:
         icon: material/weather-night
         name: Light mode
@@ -38,7 +38,10 @@ theme:
   features:
     - navigation.sections
     - navigation.top
+    - navigation.footer
     - toc.integrate
+    - content.code.copy
+    - content.code.annotate
 
 markdown_extensions:
   - admonition
@@ -50,20 +53,21 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - tables
-
-markdown_extensions:
-- pymdownx.highlight:
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-- pymdownx.inlinehilite
-- pymdownx.snippets
-- pymdownx.superfences
-
-markdown_extensions:
-  - pymdownx.caret
-  - pymdownx.mark
-  - pymdownx.tilde
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 
 
