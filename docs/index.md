@@ -23,7 +23,9 @@ We will cover some different types of SQL commands such us DDL, DML, and DQL. Pl
 
 ## Software Requirements
 
-MySQL  version
+**MySQL 8.0**
+
+Please follow the instructions from: <https://dev.mysql.com/downloads/mysql/>
 
 ## Prerequisite knowledges
 
@@ -36,7 +38,15 @@ Up to this point you should be able to perform the following tasks using the MyS
 
 ## Procedures Overview
 
-TOC of this documentation
+This SQL documentation provides a basic overview of some of the most commonly used SQL commands for data manipulation and retrieval. The documentation includes the following sections:
+
+Data Definition Language (DDL) commands: This section covers basic SQL commands for creating and modifying database objects such as tables, indexes, and views.
+
+Data Manipulation Language (DML) commands: This section covers basic SQL commands for inserting, updating, and deleting data in tables.
+
+Data Query Language (DQL) commands: This section covers basic SQL commands for retrieving data from tables using the SELECT statement.
+
+The documentation provides clear explanations of each command and includes examples to help you understand how to use them in your own SQL queries.
 
 ## Typographical Conventions
 
