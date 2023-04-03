@@ -1,19 +1,36 @@
 # Data Definition Language (DDL)
 
+<<<<<<< Updated upstream
 In this section, we will cover SQL DDL (Data Definition Language) commands, which are used to create, alter, and drop database objects such as tables, indexes, and constraints. We will go over the following SQL DDL commands:
+=======
+!!!info inline end "Schema"
+>>>>>>> Stashed changes
 
-- CREATE
-- ALTER
-- DROP
+    In SQL, a **schema** (also referred as database) is a logical container for database objects such as tables, views, indexes, and procedures.
 
+<<<<<<< Updated upstream
 By the end of this section, you will have a good understanding of how to use these commands to manage your database structure effectively. Let's open MySQL Workbench get started!
 
 ## CREATE Command
 
 The CREATE command is used to create new database objects such as tables, indexes, and constraints. Instead of creating a database by clicking on "New Schema" using mouse, this time we will use CREATE command in query script.
+=======
+In this section, we will cover the following DDL commands and create a new _schema_ and a new table in MySQL:
 
-Follow the steps below and let's
+- CREATE Command
+- ALTER Command
+- DROP Command
 
+By the end of this section, you will have a good understanding of how to use these commands to create, alter and drop your database structure effectively.
+
+## CREATE Command
+
+The CREATE command is used to create new objects in sql such as schemas, tables, indexes and constraints. Instead of using both mouse and keyboard to create schema, this time we will use only keyboard and type our commands in a query script to create a new schema and table. Let's open MySQL Workbench and get started!
+>>>>>>> Stashed changes
+
+### CREATE Schema
+
+<<<<<<< Updated upstream
 1. Go to the "File" Menu on the left corner of your Workbench and then click on "New Query Tab". This will give us a query text window where we can type our SQL commands and run them using the Execute button: . If a specific command is selected, then only that command is executed. If no commands are selected, all the commands in the query window are run.
    - If you just want to run a single command you can use the Cursor Execute button (insert icon). This button will only run the single command where the keyboard cursor is. The keyboard shortcut for this is CTRL + Enter on Windows or CMD+Enter (⌘+Enter) on Mac.
 2. Type **CREATE DATABASE intro_to_sql;** in the query
@@ -31,33 +48,174 @@ CREATE TABLE customers (
 ```
 
 In this example, we are creating a table named "customers" with four columns: "id", "name", "email", and "age". The "id" column is the primary key, and the "name" column is required (NOT NULL).
+=======
+1. Open Local instance MySQL80 by single clicking the MySQL80 rectangle.
+
+      ![Local instance MySQL80](images/Local_instance_MySQL80.png){ width="300" }
+
+2. Click the "new SQL file" button on the left corner of your Workbench.
+
+      ![New Query](images/New_Query.png){ width="300" }
+
+      This will give us a query text window where we can type our SQL commands.
+
+      ![Query text window](images/query_text_window.png){ width="350" }
+
+3. Type the commands below in your query text window:
+
+      ``` sql
+      CREATE DATABASE intro_to_sql;
+      ```
+
+    !!!Note inline end "Execute Buttons ![Execute Icons](images/execute_icon.png)"
+        **Execute button** ![Execute Icons](images/execute_all.png) is used to execute all the commands in the sql file.
+        
+        **Cursor Execute button** ![Execute Icons](images/execute_one.png) is used to to run a single command where the keyboard cursor is. The keyboard shortcut for this is CTRL + Enter on Windows or CMD+Enter (⌘+Enter) on Mac.
+
+4. Click Execute button ![Execute Icons](images/execute_one.png).
+   
+
+      After execute a success message will display in the "Output" section on the bottom of your Workbench.
+
+      ![success message](images/create_db_success_message.png){ width="400" }
+
+5. Click the refresh button on the right corner of the navigator to make sure the new database is added to your SCHEMAS list.
+
+      ![refresh schema](images/refresh_db.png){ width="300" }
+
+6. Type the commands below and execute it to set "intro_to_sql" as the default schema:
+
+      ``` sql
+      USE intro_to_sql;
+      ```
+
+      The default schema will be bolded in your schema list.
+
+      ![bold default db](images/bold_default_db.png){ width="250" }
+
+Congratulations 🎉! You have successfully created a new schema "intro_to_sql". Next, let's add a new table to our new schema.
+
+### CREATE Table
+
+In this example, we will create a table named "employee" with five columns: "EMP_ID", "FIRST_NAME", "LAST_NAME", "SALARY" and "BONUS". The "EMP_ID" column is the primary key, and other columns are required (NOT NULL).
+
+Type and execute the commands below:
+
+``` sql
+CREATE TABLE `employee` ( --(1)
+  `EMP_ID` INT NOT NULL AUTO_INCREMENT, --(2)
+  `FIRST_NAME` VARCHAR(45) NOT NULL, --(3)
+  `LAST_NAME` VARCHAR(45) NOT NULL, 
+  `SALARY` INT NOT NULL, --(4)
+  `BONUS` INT NOT NULL, 
+  PRIMARY KEY (`EMP_ID`) --(5)
+); 
+```
+
+1. This line of code will name the new table as "employee".
+2. This code will make a column called "EMP_ID" that's an integer (INT), required (NOT NULL), and increases automatically(AUTO_INCREMENT).
+3. This code will make a column called "FIRST_NAME" that's a string with length <=45 (VARCHAR(45)) and can't be empty.
+4. This code will make a column called "SALARY" that's an integer and can't be empty.
+5. This code will set "EMP_ID" as primary key.
+
+Refresh schema list in the navigator, and you will see the employee table under "intro_to_sql" schema. And a success message is shown in the "Output" section.
+
+![new table created](images/table_created.png){ width="500" }
+
+Good Job 🎉! You just created a new table using DDL CREATE command.
+
+??? Note
+
+      In SQL, by default, most commands are not case sensitive. This means that you can use uppercase or lowercase letters interchangeably when writing commands or queries, and SQL will treat them the same way.
+
+      For example, the following two queries are equivalent:
+
+      ```sql
+      SELECT * FROM employee;
+      ```
+      and
+      ```sql
+      select * from employee;
+      ```
+      However, uppercase letters are commonly used for **keywords**, such as CREATE, ALTER, DROP, SELECT, INSERT, etc. In this documentation, we will follow this rule and use uppercase letters for all keywords.
+>>>>>>> Stashed changes
 
 ## ALTER Command
 
-The ALTER command is used to modify the structure of existing database objects such as tables, indexes, and constraints. Here's an example of altering a table using the ALTER command:
+The ALTER command is used to modify the structure of existing database objects. It can add, delete, or modify columns and constraints in a table. In the example below, we will use ALTER to add columns to "employee" table.
 
+<<<<<<< Updated upstream
 ```
 ALTER TABLE customers ADD address VARCHAR(50);
+=======
+Type and execute the commands below:
+
+``` sql
+ALTER TABLE employee 
+ADD AGE INT,
+ADD BIRTH_DATE DATE;
+>>>>>>> Stashed changes
 ```
+
+You've added an "AGE" column and a "BIRTH_DATE" column to your employee table.
+
+![age and birthdate columns added](images/age_bd_column.png){ width="400" }
 
 ## DROP Command
 
-The DROP command is used to remove existing database objects such as databases, tables, indexes, and constraints. Here's an example of dropping a database using the DROP command:
+The DROP command is used to remove existing database objects such as databases, tables, indexes, and constraints.
 
+Type and execute the command below:
+
+<<<<<<< Updated upstream
 ```
 DROP TABLE customers;
+=======
+```sql
+ALTER TABLE employee
+DROP COLUMN AGE;
+>>>>>>> Stashed changes
 ```
 
-In this example, we are dropping the "customers" table.
+In this example, we dropped both "AGE" column and "BIRTH_DATE" column in "employee" table.
+
+![dropped age and birthdate columns](images/drop_age_bd.png){width="400"}
+
+Now let's try some dangerous commands. Create a new schema called "test_drop", set it as default, and create a table called "test" in this schema.
+
+```sql
+CREATE DATABASE test_drop;
+USE test_drop;
+CREATE TABLE `test` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `description` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`)
+); 
+```
+
+Then type and execute the command below:
+
+```sql
+DROP DATABASE test_drop;
+```
+
+Your "test_drop" schema including the "test" table is permanently deleted without any warning message when you execute the above command.
 
 !!! warning
 
-Using the DROP DATABASE command will delete a database, all of it's tables, and all the data inside all of those tables. It is also important to be careful when using the DROP command as it permanently deletes the specified database object.
+       DROP DATABASE command deletes the database and all its tables and data.
+       
+       It will delete the specified object _permanently_, so use it with caution.
 
 ## Conclusion
 
-We hope this section has been helpful with your learning journey on the CREATE, ALTER, and DROP commands. You can easily create, modify, and delete database objects using these commands to fit your needs.
+We hope this section has been helpful with your learning journey on the following:
 
-In the next section, we will cover SQL DML commands, which are used to manipulate data in the database. With these commands, you can retrieve, insert, update, and delete data from your database.
+- [x] Using CREATE to create a new database objects such as schema, table and column
+- [x] Using USE to set a schema to default
+- [x] Using ALTER to modify the database objects
+- [x] Using DROP to delete database objects
 
-Let's continue learning!
+In the next section, we will go through SQL DML commands, which are used to manipulate data in the database. With these commands, you can retrieve, insert, update, and delete data from your database.
+
+Let's continue learning! 👉 **[DML](DML.md)**

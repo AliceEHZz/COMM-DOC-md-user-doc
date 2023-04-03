@@ -1,6 +1,6 @@
 site_name: SQL Introduction
 nav:
-  - Home: "home.md"
+  - Home: "index.md"
   - Introduction to SQL: "SQLintroduction.md"
   - DDL: "DDL.md"
   - DML: "DML.md"
@@ -38,7 +38,10 @@ theme:
   features:
     - navigation.sections
     - navigation.top
+    - navigation.footer
     - toc.integrate
+    - content.code.copy
+    - content.code.annotate
 
 markdown_extensions:
   - admonition
@@ -50,3 +53,18 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true

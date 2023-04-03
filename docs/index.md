@@ -13,6 +13,13 @@ introduce DML,INSERT - Used to add data to tables. UPDATE - Used to edit data in
 
 The goal of this document is to serve as an introduction to basic SQL commands that Relational Databases share.
 
+<<<<<<< Updated upstream:docs/home.md
+=======
+SQL is blablabla
+
+simple intro to categories.
+
+>>>>>>> Stashed changes:docs/index.md
 ## Intended Users
 
 (TBModify) This documentation is targeted towards the following users:
@@ -22,7 +29,13 @@ The goal of this document is to serve as an introduction to basic SQL commands t
 
 ## Software Requirements
 
+<<<<<<< Updated upstream:docs/home.md
 ## Prepersuite knowledges
+=======
+MySQL  version
+
+## Prerequisite knowledges
+>>>>>>> Stashed changes:docs/index.md
 
 Up to this point you should be able to perform the following tasks using the MySQL Workbench:
 
