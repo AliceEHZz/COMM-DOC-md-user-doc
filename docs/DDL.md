@@ -115,7 +115,6 @@ Type and execute the commands below:
 ALTER TABLE employee 
 ADD AGE INT,
 ADD BIRTH_DATE DATE;
->>>>>>> Stashed changes
 ```
 
 You've added an "AGE" column and a "BIRTH_DATE" column to your employee table.
@@ -134,7 +133,7 @@ DROP COLUMN BIRTH_DATE,
 DROP COLUMN AGE;
 ```
 
-In this example, we dropped both "AGE" column and "BIRTH_DATE" column in "employee" table.
+In this example, we deleted both "AGE" column and "BIRTH_DATE" column in "employee" table.
 
 ![dropped age and birthdate columns](images/drop_age_bd.png){width="400"}
 
@@ -156,13 +155,11 @@ Then type and execute the command below:
 DROP DATABASE test_drop;
 ```
 
-Your "test_drop" schema including the "test" table is permanently deleted without any warning message when you execute the above command.
+Your "test_drop" schema including the "test" table is _permanently deleted without any warning message_ when you execute the above command.
 
 !!! warning
 
-       DROP DATABASE command deletes the database and all its tables and data.
-       
-       It will delete the specified object _permanently_, so use it with caution.
+       DROP DATABASE command deletes the database and all its tables and data. It will delete the specified object _permanently_, so use it with caution.
 
 ## Conclusion
 
