@@ -25,7 +25,7 @@ We will cover some different types of SQL commands such us DDL, DML, and DQL. Pl
 
 MySQL  version
 
-## Prepersuite knowledges
+## Prerequisite knowledges
 
 Up to this point you should be able to perform the following tasks using the MySQL Workbench:
 

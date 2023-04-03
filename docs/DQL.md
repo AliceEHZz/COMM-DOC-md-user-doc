@@ -11,6 +11,7 @@ A SELECT statement has the following parts or clauses:
 - ```HAVING```
 - ```ORDER BY```
 
+
 Each clause in the ```SELECT``` statement (aside from ```SELECT``` itself) is optional. The individual optional clauses can be combined or omitted as needed.
 
 Although the ```SELECT``` statement can retrieve data from multiple tables at once, in this section we will focus on retrieving different types of data from a single table using only ```SELECT``` and ```FROM```.
@@ -41,7 +42,8 @@ You should get back all 4 employee rows and all 5 columns (EMP_ID, FIRST_NAME, L
 ![Image title](./images/select_all.png)
 
 !!! info
-Remember that, although UPPERCASE and lowercase are both permitted, by convention we use UPPERCASE for ```SELECT``` keyword clauses like ```SELECT``` and ```FROM```. This helps us with readability.
+
+    Remember that, although UPPERCASE and lowercase are both permitted, by convention we use UPPERCASE for ```SELECT``` keyword clauses like ```SELECT``` and ```FROM```. This helps us with readability.
 
 ## SELECT specific columns
 
@@ -50,7 +52,7 @@ SELECT {column1,column2…}
 FROM <table>;
 ```
 
-Let's try this using customer table. We want to get back the customers name (last, first, and middle initial) and their customer balance.
+Let's try this using employee table. We want to get back the employee names (last and first) and their salary.
 
 Copy and execute the following command:
 
@@ -101,7 +103,7 @@ An example syntax for this scenario is shown below:
 SELECT (column1 + column2) FROM <table>;
 ```
 
-need to add some contents here
+Let's see what is the total each employee will receive by executing the code below.
 
 ```sql
 SELECT (SALARY + BONUS) AS TOTAL
@@ -111,3 +113,7 @@ FROM employee;
 ![Image title](./images/select_cal.png)
 
 This gives us the total for each employee in the employee table by calculating the salary plus the bonus.
+
+## Conclusion
+
+We hope this section has been helpful with your deep learning on the ```SELECT``` commands. You can retrieve and manipulate the data you get from the databases. There are more options of the ```SELECT``` clauses, such as ```WHERE```, ```GROUP BY```, and ```ORDER BY``` for you to explore.

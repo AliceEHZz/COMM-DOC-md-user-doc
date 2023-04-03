@@ -51,9 +51,13 @@ After you execute you should see this message in your Action Output:
 
 This statement updates the salary of all employees with the last name "Doe" to **65000** in the employees table.
 
-!!! Tips (move to troubleshooting)
+!!! tip
 
-    If you get an error message below, you can either manually disable the safe mode or add a line of code above the update code chunk.
+    There is a chance that you may see the error message below: 
+
+    You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column.  To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.
+    
+    You can either manually disable the safe mode or add a line of code above the update code chunk.
 
     ``` sql
     SET SQL_SAFE_UPDATES = 0;
@@ -61,9 +65,7 @@ This statement updates the salary of all employees with the last name "Doe" to *
 
     This line code will also disable the safe mode for you. Then, you can try to execute the code chunk again.
 
-    11:13:12 UPDATE employees SET EMP_SALARY = 65000 WHERE EMP_LNAME = 'Doe' Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column.  To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect. 0.015 sec
-
-!!! warning needed
+!!! warning
 
     Be careful with the WHERE clause: The WHERE clause determines which records in the table will be updated. If you forget to include a WHERE clause, the update will be applied to all records in the table, which could lead to unintended consequences. Make sure you double-check your WHERE clause to ensure that it is targeting only the records you want to update.
 
@@ -98,4 +100,4 @@ We hope this section has been helpful with your learning journey on the ```INSER
 
 In the next section, we will cover SQL DQL commands, which are used to retrieve data in the database. With these commands, you can select wanted data from your database.
 
-Let's continue learning!
+Let's continue learning! 👉 **[DQL](DQL.md)**
