@@ -1,20 +1,9 @@
 # Data Definition Language (DDL)
 
-<<<<<<< Updated upstream
-In this section, we will cover SQL DDL (Data Definition Language) commands, which are used to create, alter, and drop database objects such as tables, indexes, and constraints. We will go over the following SQL DDL commands:
-=======
 !!!info inline end "Schema"
->>>>>>> Stashed changes
 
     In SQL, a **schema** (also referred as database) is a logical container for database objects such as tables, views, indexes, and procedures.
 
-<<<<<<< Updated upstream
-By the end of this section, you will have a good understanding of how to use these commands to manage your database structure effectively. Let's open MySQL Workbench get started!
-
-## CREATE Command
-
-The CREATE command is used to create new database objects such as tables, indexes, and constraints. Instead of creating a database by clicking on "New Schema" using mouse, this time we will use CREATE command in query script.
-=======
 In this section, we will cover the following DDL commands and create a new _schema_ and a new table in MySQL:
 
 - CREATE Command
@@ -26,29 +15,7 @@ By the end of this section, you will have a good understanding of how to use the
 ## CREATE Command
 
 The CREATE command is used to create new objects in sql such as schemas, tables, indexes and constraints. Instead of using both mouse and keyboard to create schema, this time we will use only keyboard and type our commands in a query script to create a new schema and table. Let's open MySQL Workbench and get started!
->>>>>>> Stashed changes
 
-### CREATE Schema
-
-<<<<<<< Updated upstream
-1. Go to the "File" Menu on the left corner of your Workbench and then click on "New Query Tab". This will give us a query text window where we can type our SQL commands and run them using the Execute button: . If a specific command is selected, then only that command is executed. If no commands are selected, all the commands in the query window are run.
-   - If you just want to run a single command you can use the Cursor Execute button (insert icon). This button will only run the single command where the keyboard cursor is. The keyboard shortcut for this is CTRL + Enter on Windows or CMD+Enter (⌘+Enter) on Mac.
-2. Type **CREATE DATABASE intro_to_sql;** in the query
-3. Click Execute icon here.
-4. After you execute you should see this message on the bottom:
-5. Confirm that you created your new database by refreshing your database list and seeing if your database is listed.
-
-```
-CREATE TABLE customers (
-   id INT PRIMARY KEY,
-   name VARCHAR(50) NOT NULL,
-   email VARCHAR(50),
-   age INT
-);
-```
-
-In this example, we are creating a table named "customers" with four columns: "id", "name", "email", and "age". The "id" column is the primary key, and the "name" column is required (NOT NULL).
-=======
 1. Open Local instance MySQL80 by single clicking the MySQL80 rectangle.
 
       ![Local instance MySQL80](images/Local_instance_MySQL80.png){ width="300" }
@@ -74,7 +41,6 @@ In this example, we are creating a table named "customers" with four columns: "i
 
 4. Click Execute button ![Execute Icons](images/execute_one.png).
    
-
       After execute a success message will display in the "Output" section on the bottom of your Workbench.
 
       ![success message](images/create_db_success_message.png){ width="400" }
@@ -138,16 +104,11 @@ Good Job 🎉! You just created a new table using DDL CREATE command.
       select * from employee;
       ```
       However, uppercase letters are commonly used for **keywords**, such as CREATE, ALTER, DROP, SELECT, INSERT, etc. In this documentation, we will follow this rule and use uppercase letters for all keywords.
->>>>>>> Stashed changes
 
 ## ALTER Command
 
 The ALTER command is used to modify the structure of existing database objects. It can add, delete, or modify columns and constraints in a table. In the example below, we will use ALTER to add columns to "employee" table.
 
-<<<<<<< Updated upstream
-```
-ALTER TABLE customers ADD address VARCHAR(50);
-=======
 Type and execute the commands below:
 
 ``` sql
@@ -167,14 +128,10 @@ The DROP command is used to remove existing database objects such as databases, 
 
 Type and execute the command below:
 
-<<<<<<< Updated upstream
-```
-DROP TABLE customers;
-=======
 ```sql
 ALTER TABLE employee
+DROP COLUMN BIRTH_DATE,
 DROP COLUMN AGE;
->>>>>>> Stashed changes
 ```
 
 In this example, we dropped both "AGE" column and "BIRTH_DATE" column in "employee" table.

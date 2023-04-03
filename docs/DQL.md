@@ -1,8 +1,5 @@
-# DQL - SELECT (focus only on SELECT and FROM Wk 5 lab part 2, page 1-16)
+# Querying the Database with SELECT (focus only on SELECT and FROM Wk 5 lab part 2, page 1-16)
 
-<<<<<<< Updated upstream
-##
-=======
 The goal of this document is to serve as an introduction to querying a database using the SELECT statement. The SELECT statement has a number of parts and can perform many different tasks for retrieving data from the database.
 
 A SELECT statement has the following parts or clauses:
@@ -103,4 +100,3 @@ FROM LINE;
 **image**
 
 This gives us the subtotal for each line in the Line table by calculating the price (LINE_PRICE) multiplied by the quantity (LINE_UNITS).
->>>>>>> Stashed changes
