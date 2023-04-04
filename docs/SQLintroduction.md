@@ -14,13 +14,13 @@ We give names to each of the different categories of these SQL commands:
 
 These SQL commands are used to define the database schema and its structure. They are responsible for creating, altering, and deleting database objects, such as tables, indexes, views, and procedures. Examples of DDL commands include ```CREATE```, ```ALTER```, and ```DROP```.
 
-### Data Query Language (DQL)
-
-These SQL commands are used to retrieve data from the database. They allow you to search, filter, and sort data in tables, views, or any other database object that contains data. The most common DQL command is ```SELECT```.
-
 ### Data Manipulation Language (DML)
 
 These SQL commands are used to manipulate the data within the database. They allow you to insert, update, and delete data in tables, views, or any other database object that contains data. Examples of DML commands include ```INSERT```, ```UPDATE```, and ```DELETE```.
+
+### Data Query Language (DQL)
+
+These SQL commands are used to retrieve data from the database. They allow you to search, filter, and sort data in tables, views, or any other database object that contains data. The most common DQL command is ```SELECT```.
 
 ### Data Control Language (DCL)
 
