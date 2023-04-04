@@ -8,6 +8,9 @@ nav:
   - Troubleshooting: "troubleshooting.md"
   - Glossary: "glossary.md"
 
+repo_url: https://github.com/AliceEHZz/COMM-SQL-Introduction
+repo_name: SQL Introduction
+
 theme:
   name: material
 
@@ -68,3 +71,5 @@ markdown_extensions:
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true

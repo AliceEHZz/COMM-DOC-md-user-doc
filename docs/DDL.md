@@ -1,63 +1,59 @@
 # Data Definition Language (DDL)
 
-!!!info inline end "Schema"
+In this section, we will cover the following DDL commands and create a new [schema](glossary.md) and a new table in MySQL:
 
-    In SQL, a **schema** (also referred as database) is a logical container for database objects such as tables, views, indexes, and procedures.
-
-In this section, we will cover the following DDL commands and create a new _schema_ and a new table in MySQL:
-
-- CREATE Command
-- ALTER Command
-- DROP Command
+- `CREATE`
+- `ALTER`
+- `DROP`
 
 By the end of this section, you will have a good understanding of how to use these commands to create, alter and drop your database structure effectively.
 
 ## CREATE Command
 
-The CREATE command is used to create new objects in sql such as schemas, tables, indexes and constraints. Instead of using both mouse and keyboard to create schema, this time we will use only keyboard and type our commands in a query script to create a new schema and table. Let's open MySQL Workbench and get started!
+The CREATE command is used to create new objects in sql such as schemas, tables, indexes and constraints. Instead of using both mouse and keyboard to create schema, this time we will use only keyboard and type our commands in a [query script_](glossary.md) to create a new schema and table. Let's open MySQL Workbench and get started 🔥!
 
-1. Open Local instance MySQL80 by single clicking the MySQL80 rectangle.
+1.  Open Local instance MySQL80 by single clicking the MySQL80 rectangle.
 
-      ![Local instance MySQL80](images/Local_instance_MySQL80.png){ width="300" }
+    ![Local instance MySQL80](images/Local_instance_MySQL80.png){ width="300" }
 
-2. Click the "new SQL file" button on the left corner of your Workbench.
+2.  Click the "new SQL file" button on the left corner of your Workbench.
 
-      ![New Query](images/New_Query.png){ width="300" }
+    ![New Query](images/New_Query.png){ width="300" }
 
-      This will give us a query text window where we can type our SQL commands.
+    This will give us a query text window where we can type our SQL commands.
 
-      ![Query text window](images/query_text_window.png){ width="350" }
+    ![Query text window](images/query_text_window.png){ width="350" }
 
-3. Type the commands below in your query text window:
+3.  Type the commands below in your query text window:
 
-      ``` sql
-      CREATE DATABASE intro_to_sql;
-      ```
+    ```sql
+    CREATE DATABASE intro_to_sql;
+    ```
 
     !!!Note inline end "Execute Buttons ![Execute Icons](images/execute_icon.png)"
         **Execute button** ![Execute Icons](images/execute_all.png) is used to execute all the commands in the sql file.
-        
+
         **Cursor Execute button** ![Execute Icons](images/execute_one.png) is used to to run a single command where the keyboard cursor is. The keyboard shortcut for this is CTRL + Enter on Windows or CMD+Enter (⌘+Enter) on Mac.
 
-4. Click Execute button ![Execute Icons](images/execute_one.png).
-   
-      After execute a success message will display in the "Output" section on the bottom of your Workbench.
+4.  Click Execute button ![Execute Icons](images/execute_one.png).
 
-      ![success message](images/create_db_success_message.png){ width="400" }
+    After execute a success message will display in the "Output" section on the bottom of your Workbench.
 
-5. Click the refresh button on the right corner of the navigator to make sure the new database is added to your SCHEMAS list.
+    ![success message](images/create_db_success_message.png){ width="400" }
 
-      ![refresh schema](images/refresh_db.png){ width="300" }
+5.  Click the refresh button on the right corner of the navigator to make sure the new database is added to your SCHEMAS list.
 
-6. Type the commands below and execute it to set "intro_to_sql" as the default schema:
+    ![refresh schema](images/refresh_db.png){ width="300" }
 
-      ``` sql
-      USE intro_to_sql;
-      ```
+6.  Type the commands below and execute it to set "intro_to_sql" as the default schema:
 
-      The default schema will be bolded in your schema list.
+    ```sql
+    USE intro_to_sql;
+    ```
 
-      ![bold default db](images/bold_default_db.png){ width="250" }
+    The default schema will be bolded in your schema list.
+
+    ![bold default db](images/bold_default_db.png){ width="250" }
 
 Congratulations 🎉! You have successfully created a new schema "intro_to_sql". Next, let's add a new table to our new schema.
 
@@ -67,20 +63,20 @@ In this example, we will create a table named "employee" with five columns: "EMP
 
 Type and execute the commands below:
 
-``` sql
+```sql
 CREATE TABLE `employee` ( --(1)
   `EMP_ID` INT NOT NULL AUTO_INCREMENT, --(2)
   `FIRST_NAME` VARCHAR(45) NOT NULL, --(3)
-  `LAST_NAME` VARCHAR(45) NOT NULL, 
+  `LAST_NAME` VARCHAR(45) NOT NULL,
   `SALARY` INT NOT NULL, --(4)
-  `BONUS` INT NOT NULL, 
+  `BONUS` INT NOT NULL,
   PRIMARY KEY (`EMP_ID`) --(5)
-); 
+);
 ```
 
 1. This line of code will name the new table as "employee".
 2. This code will make a column called "EMP_ID" that's an integer (INT), required (NOT NULL), and increases automatically(AUTO_INCREMENT).
-3. This code will make a column called "FIRST_NAME" that's a string with length <=45 (VARCHAR(45)) and can't be empty.
+3. This code will make a column called "FIRST_NAME" that's a string with length <=45 ([VARCHAR(45)](glossary.md)) and can't be empty.
 4. This code will make a column called "SALARY" that's an integer and can't be empty.
 5. This code will set "EMP_ID" as primary key.
 
@@ -111,8 +107,8 @@ The ALTER command is used to modify the structure of existing database objects. 
 
 Type and execute the commands below:
 
-``` sql
-ALTER TABLE employee 
+```sql
+ALTER TABLE employee
 ADD AGE INT,
 ADD BIRTH_DATE DATE;
 ```
@@ -146,7 +142,7 @@ CREATE TABLE `test` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `description` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`)
-); 
+);
 ```
 
 Then type and execute the command below:
@@ -155,9 +151,9 @@ Then type and execute the command below:
 DROP DATABASE test_drop;
 ```
 
-Your "test_drop" schema including the "test" table is _permanently deleted without any warning message_ when you execute the above command.
+Your "test*drop" schema including the "test" table is permanently deleted without any warning message* when you execute the above command.
 
-!!! warning
+!!! danger
 
        DROP DATABASE command deletes the database and all its tables and data. It will delete the specified object _permanently_, so use it with caution.
 
