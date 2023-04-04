@@ -1,9 +1,5 @@
 # Glossary
 
-!!! warning
-
-    5 - 10 items in this section!
-
 | **Term**                      | **Description** |
 | ----------------------------- | --------------------------- |
 | **Relational databases** | A type of database that organizes data into one or more tables with a predefined structure, allowing data to be easily accessed and manipulated using SQL queries. It has a set of instructions or commands that can be run to create databases and tables, modify existing tables, add data to tables, retrieve data from tables and add and modify users and permissions. |

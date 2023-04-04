@@ -92,14 +92,13 @@ Good Job 🎉! You just created a new table using DDL CREATE command.
 
       For example, the following two queries are equivalent:
 
-      ```sql
-      SELECT * FROM employee;
-      ```
-      and
-      ```sql
-      select * from employee;
-      ```
-      However, uppercase letters are commonly used for **keywords**, such as CREATE, ALTER, DROP, SELECT, INSERT, etc. In this documentation, we will follow this rule and use uppercase letters for all keywords.
+**insert little reference inside code!**
+
+The "id" column is the primary key, and the "name" column is required (NOT NULL).
+
+1. Click Execute icon.
+
+In this example, we are creating a table named "customers" with four columns: "id", "name", "email", and "age". The "id" column is the primary key, and the "name" column is required (NOT NULL).
 
 ## ALTER Command
 

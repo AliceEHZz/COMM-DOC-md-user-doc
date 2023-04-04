@@ -1,27 +1,26 @@
-# Querying the Database with SELECT (focus only on SELECT and FROM Wk 5 lab part 2, page 1-16)
+# Data Query Language (DQL)
 
-The goal of this document is to serve as an introduction to querying a database using the SELECT statement. The SELECT statement has a number of parts and can perform many different tasks for retrieving data from the database.
+➡️The goal of this document is to serve as an introduction to querying a database using the ```SELECT``` statement. The ```SELECT``` statement has a number of parts and can perform many different tasks for retrieving data from the database.
 
-A SELECT statement has the following parts or clauses:
+A ```SELECT``` statement has the following parts or clauses:
 
-- SELECT
-- FROM
-- WHERE
-- GROUP BY
-- HAVING
-- ORDER BY
+- ```FROM```
+- ```WHERE```
+- ```GROUP BY```
+- ```HAVING```
+- ```ORDER BY```
 
-Each clause in the SELECT statement (aside from SELECT itself) is optional. The individual optional clauses can be combined or omitted as needed.
+Each clause in the ```SELECT``` statement (aside from ```SELECT``` itself) is optional. The individual optional clauses can be combined or omitted as needed.
 
-Although the SELECT statement can retrieve data from multiple tables at once, in this section we will focus on retrieving different types of data from a single table using only SELECT and FROM.
+Although the ```SELECT``` statement can retrieve data from multiple tables at once, in this section we will focus on retrieving different types of data from a single table using only ```SELECT``` and ```FROM```.🚩
 
-By completing this section, you will know how to properly use the SELECT statement only comes from practice and with experience in a wide variety of scenarios.
+By completing this section, you will know how to properly use the ```SELECT``` statement only comes from practice and with experience in a wide variety of scenarios.
 
 ## SELECT all data
 
-SELECT and show all rows and all columns from a single table is one of the simplest SELECT statements implementing only 1 of the optional clauses - the FROM clause.
+```SELECT``` and show all rows and all columns from a single table is one of the simplest ```SELECT``` statements implementing only 1 of the optional clauses - the ```FROM``` clause.
 
-Right after the SELECT keyword we use an asterisk **'\*'** to indicate all of the columns.
+Right after the SELECT keyword we use an asterisk ```*``` to indicate all of the columns.
 
 The syntax for this scenario is shown below:
 
@@ -29,74 +28,90 @@ The syntax for this scenario is shown below:
 SELECT * FROM <table>;
 ```
 
-Let's see all the rows and columns for the customer table.
+Let's see all the rows and columns for the employee table.
 Copy and execute
 
 ```sql
-SELECT * FROM CUSTOMER;
+SELECT * FROM employee;
 ```
 
-You should get back all 10 customer rows and all 7 columns (CUS_CODE, CUS_LNAME, CUS_FNAME, CUS_INITIAL, CUS_AREACODE, CUS_PHONE, CUS_BALANCE).
+✔️You should get back all 4 employee rows and all 5 columns (EMP_ID, FIRST_NAME, LAST_NAME, SALARY, BONUS).
 
-**insert image**
+![Image title](./images/select_all.png)
 
 !!! info
-Remember that, although UPPERCASE and lowercase are both permitted, by convention we use UPPERCASE for SELECT keyword clauses like SELECT and FROM. This helps us with readability.
+
+    Remember that, although UPPERCASE and lowercase are both permitted, by convention we use UPPERCASE for ```SELECT``` keyword clauses like ```SELECT``` and ```FROM```. This helps us with readability.
 
 ## SELECT specific columns
 
 ```sql
-SELECT {column1,column2…}
+SELECT (column1,column2…)
 FROM <table>;
 ```
 
-Let's try this using customer table. We want to get back the customers name (last, first, and middle initial) and their customer balance.
+Let's try this using employee table. We want to get back the employee names (last and first) and their salary.
 
 Copy and execute the following command:
 
 ```sql
-SELECT CUS_FNAME, CUS_INITIAL, CUS_LNAME, CUS_BALANCE
-FROM CUSTOMER;
+SELECT FIRST_NAME, LAST_NAME, SALARY 
+FROM employee;
 ```
 
-You should get back all 10 customer rows but only 4 columns (US_FNAME, CUS_INITIAL, CUS_LNAME, CUS_BALANCE).
+✔️You should get back all 4 employees rows but only 3 columns (FIRST_NAME, LAST_NAME, SALARY).
 
-**insert image**
+![Image title](./images/select_specific_cols.png)
 
 ## SELECT computed columns
 
-Similarly to Scenario 2, we can retrieve all the rows from a table and some of the columns, but those columns could include a calculation to compute a derived value.
+We can retrieve all the rows from a table and some of the columns, but those columns could include a calculation to compute a derived value.
 Remember derived values are derived from other columns and/or functions.
 
-For good database design, we split people's names into first name, last name and middle name. But what is we want to recombine those into a single name? We could add the text for first name together with the text from last name (also known as concatenating 2 strings together).
+### CONCAT
 
-Copy and execute the following command:
+For good database design, we split people's names into first name and last name. But what if we want to recombine those into a single name? We could add the text for first name together with the text from last name (also known as concatenating 2 strings together).
+
+The syntax for this scenario is shown below:
 
 ```sql
-SELECT CONCAT(CUS_FNAME, ' ', CUS_LNAME) FROM CUSTOMER;
+SELECT CONCAT(column1, ' ', column2) FROM <table>;
 ```
 
-**insert image**
-
-In the resultset, MySQL doesn't know what to call the column and so it names it based on the function we used. We can easily fix this, by giving the column an alias. An alias is just a nickname for the column so it looks better in the resultset.
+In the result, MySQL doesn't know what to call the column and so it names it based on the function we used. We can easily fix this, by giving the column an alias. An alias is just a nickname for the column so it looks better in the result.
 
 Copy and execute
 
 ```sql
-SELECT CONCAT(CUS_FNAME, ' ', CUS_LNAME) AS "Full Name" FROM CUSTOMER;
+SELECT CONCAT(FIRST_NAME, ' ', LAST_NAME) AS "Full Name" 
+FROM employee;
 ```
 
-**insert image**
+![Image title](./images/concat.png)
 
-By adding the AS "Full Name" after the calculation of the derived value, we'll see our alias instead of "No column name". You should put double quotes around your alias, if your alias includes spaces.
+✔️By adding the ```AS "Full Name"``` after the calculation of the derived value, we'll see our alias instead of "No column name". You should put double quotes around your alias, if your alias includes spaces.
 
-Copy and execute
+### CALCULATION
+
+Sometimes, we need to get some derived values from the database. But we don't want to store those derived values into our database because it will take up more space of our database. Instead, we can directly calculate those values and only get the value we want. 
+
+An example syntax for this scenario is shown below:
 
 ```sql
-SELECT INV_NUMBER, LINE_NUMBER, P_CODE, LINE_UNITS, LINE_PRICE, LINE_UNITS * LINE_PRICE AS Subtotal
-FROM LINE;
+SELECT (column1 + column2) FROM <table>;
 ```
 
-**image**
+Let's see what is the total each employee will receive by executing the code below.
 
-This gives us the subtotal for each line in the Line table by calculating the price (LINE_PRICE) multiplied by the quantity (LINE_UNITS).
+```sql
+SELECT (SALARY + BONUS) AS TOTAL
+FROM employee;
+```
+
+![Image title](./images/select_cal.png)
+
+✔️This gives us the total for each employee in the employee table by calculating the salary plus the bonus.
+
+## Conclusion
+
+😀We hope this section has been helpful with your deep learning on the ```SELECT``` commands. You can retrieve and manipulate the data you get from the databases. There are more options of the ```SELECT``` clauses, such as ```WHERE```, ```GROUP BY```, and ```ORDER BY``` for you to explore.

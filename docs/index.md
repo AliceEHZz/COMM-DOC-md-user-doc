@@ -1,6 +1,6 @@
 # Introduction
 
-👋 Welcome to this documentation on [DDL](DDL.md), [DQL](DQL.md), and [DML](DML.md) - three essential components of the Structured Query Language (SQL) language that are used to manage [relational databases](glossary.md). The goal of this document is to serve as an introduction to basic SQL commands that relational databases share.
+👋 Welcome to this documentation on [DDL](DDL.md), [DQL](DQL.md), and [DML](DML.md) - three essential components of the Structured Query Language (SQL) language that are used to manage [relational databases](glossary.md). By reading this document, you will gain an understanding of the basics of SQL syntax that are common to all relational databases, and learn how to perform common operations on a database using SQL. So, let's dive into the world of SQL!
 
 > **SQL** is a standard language for storing, manipulating and retrieving data in databases. Apart from querying data, the language serves several other purposes on database management operation, such as creating, modifying, and removing records or [database objects](glossary.md), defining relationships between objects and setting constraints.
 >
