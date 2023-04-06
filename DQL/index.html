@@ -432,14 +432,14 @@
 </ul>
 <p>Each clause in the <code>SELECT</code> statement (aside from <code>SELECT</code> itself) is optional. The individual optional clauses can be combined or omitted as needed.</p>
 <p>Although the <code>SELECT</code> statement can retrieve data from multiple tables at once, in this section we will focus on retrieving different types of data from a single table using only <code>SELECT</code> and <code>FROM</code>.</p>
-<p>By completing this section, you will know how to properly use the <code>SELECT</code> statement only comes from practice and with experience in a wide variety of scenarios.</p>
+<p>By completing this section, you will know how to properly use the <code>SELECT</code> statement only comes from practice and experience in a wide variety of scenarios.</p>
 <h2 id="select-all-data">SELECT All Data</h2>
 <p><code>SELECT</code> and show all rows and all columns from a single table is one of the simplest <code>SELECT</code> statements implementing only 1 of the optional clauses - the <code>FROM</code> clause.</p>
 <p>Right after the SELECT keyword we use an asterisk <code>*</code> to indicate all of the columns.</p>
 <p>The syntax for this scenario is shown below:</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="k">table</span><span class="o">&gt;</span><span class="p">;</span>
 </span></code></pre></div>
-<p>Let's see all the rows and columns for the employee table. Type and execute:</p>
+<p>Let's see all the rows and columns for the "employee" table. Type and execute:</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">employee</span><span class="p">;</span>
 </span></code></pre></div>
 <p>✔️You should get back all 4 employee rows and all 5 columns (EMP_ID, FIRST_NAME, LAST_NAME, SALARY, BONUS).</p>
@@ -453,30 +453,30 @@
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="p">(</span><span class="n">column1</span><span class="p">,</span><span class="n">column2</span><span class="err">…</span><span class="p">)</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="k">table</span><span class="o">&gt;</span><span class="p">;</span>
 </span></code></pre></div>
-<p>Let's try this using employee table. We want to get back the employee names (last and first) and their salary.</p>
+<p>Let's try this using "employee" table. We want to get back the employee names (last and first) and their salary.</p>
 <p>Type and execute the following command:</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">FIRST_NAME</span><span class="p">,</span><span class="w"> </span><span class="n">LAST_NAME</span><span class="p">,</span><span class="w"> </span><span class="n">SALARY</span><span class="w"> </span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employee</span><span class="p">;</span>
 </span></code></pre></div>
-<p>✔️You should get back all 4 employees rows but only 3 columns (FIRST_NAME, LAST_NAME, SALARY).</p>
+<p>✔️You should get back all 4 employee rows but only 3 columns (FIRST_NAME, LAST_NAME, SALARY).</p>
 <p><img alt="Image title" src="../images/select_specific_cols.png" /></p>
 <h2 id="select-computed-columns">SELECT Computed Columns</h2>
 <p>We can retrieve all the rows from a table and some of the columns, but those columns could include a calculation to compute a derived value.
-Remember derived values are derived from other columns and/or functions.</p>
+Remember that derived values are derived from other columns and/or functions.</p>
 <h3 id="concat">CONCAT</h3>
-<p>For good database design, we split people's names into first name and last name. But what if we want to recombine those into a single name? We could add the text for first name together with the text from last name (also known as concatenating 2 strings together).</p>
+<p>For good database design, we split people's names into first names and last names. But what if we want to recombine those into a single name? We could add the text for the first name together with the text from the last name (also known as concatenating 2 strings together).</p>
 <p>The syntax for this scenario is shown below:</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="k">table</span><span class="o">&gt;</span><span class="p">;</span>
 </span></code></pre></div>
-<p>In the result, MySQL doesn't know what to call the column and so it names it based on the function we used. We can easily fix this, by giving the column an alias. An alias is just a nickname for the column so it looks better in the result.</p>
+<p>By default, MySQL doesn't know what to call the column and so it names it based on the function we used. We can easily fix this, by giving the column an alias. An alias is just a nickname for the column so it looks better in the result.</p>
 <p>Copy and execute:</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">FIRST_NAME</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">LAST_NAME</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">&quot;Full Name&quot;</span><span class="w"> </span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employee</span><span class="p">;</span>
 </span></code></pre></div>
 <p><img alt="Image title" src="../images/concat.png" /></p>
-<p>✔️By adding the <code>AS "Full Name"</code> after the calculation of the derived value, we'll see our alias instead of "No column name". You should put double quotes around your alias, if your alias includes spaces.</p>
+<p>✔️By adding the <code>AS "Full Name"</code> after the calculation of the derived value, we'll see our alias instead of "No column name". You should put double quotes around your alias if your alias includes spaces.</p>
 <h3 id="calculation">CALCULATION</h3>
-<p>Sometimes, we need to get some derived values from the database. But we don't want to store those derived values into our database because it will take up more space of our database. Instead, we can directly calculate those values and only get the value we want. </p>
+<p>Sometimes, we need to get some derived values from the database. But we don't want to store those derived values in our database because it will take up more space in our database. Instead, we can directly calculate those values and only get the value we want. </p>
 <p>An example syntax for this scenario is shown below:</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="p">(</span><span class="n">column1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">column2</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="k">table</span><span class="o">&gt;</span><span class="p">;</span>
 </span></code></pre></div>
@@ -485,10 +485,9 @@ Remember derived values are derived from other columns and/or functions.</p>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employee</span><span class="p">;</span>
 </span></code></pre></div>
 <p><img alt="Image title" src="../images/select_cal.png" /></p>
-<p>✔️ This gives us the total for each employee in the employee table by calculating the salary plus the bonus.</p>
+<p>✔️ This gives us the total for each employee in the "employee" table by calculating the salary plus the bonus.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>😀 We hope this section has been helpful with your deep learning on the <code>SELECT</code> commands. You can retrieve and manipulate the data you get from the databases. There are more options of the <code>SELECT</code> clauses, such as <code>WHERE</code>, <code>GROUP BY</code>, and <code>ORDER BY</code> for you to explore.</p>
-<p><em>Author: Xiao</em></p>
+<p>😀We hope this section has been helpful with your deep learning on the <code>SELECT</code> commands. You can retrieve and manipulate the data you get from the databases. There are more options for the <code>SELECT</code> clauses, such as <code>WHERE</code>, <code>GROUP BY</code>, and <code>ORDER BY</code> for you to explore.</p>
 
 
 

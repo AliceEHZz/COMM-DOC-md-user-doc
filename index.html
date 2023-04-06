@@ -408,7 +408,7 @@
 <h1 id="introduction">Introduction</h1>
 <p>👋 Welcome to this documentation on <a href="DDL/">DDL</a>, <a href="DQL/">DQL</a>, and <a href="DML/">DML</a> - three essential components of the Structured Query Language (SQL) language that are used to manage <a href="glossary/">relational databases</a>. By reading this document, you will gain an understanding of the basics of SQL syntax that are common to all relational databases, and learn how to perform common operations on a database using SQL. So, let's dive into the world of SQL!</p>
 <blockquote>
-<p><strong>SQL</strong> is a standard language for storing, manipulating and retrieving data in databases. Apart from querying data, the language serves several other purposes on database management operation, such as creating, modifying, and removing records or <a href="glossary/">database objects</a>, defining relationships between objects and setting constraints.</p>
+<p><strong>SQL</strong> is a standard language for storing, manipulating, and retrieving data in databases. Apart from querying data, the language serves several other purposes in database management operations, such as creating, modifying, and removing records or <a href="glossary/">database objects</a>, defining relationships between objects, and setting constraints.</p>
 <p>Therefore, the language is multi-functional, enabling developers to carry out various data manipulation and management tasks within a database.</p>
 <p>SQL commands are classified into five categories based on their purpose:</p>
 <ul>
@@ -428,17 +428,17 @@
 </ul>
 <p>Whether you are a complete newcomer to SQL or a seasoned developer looking to enhance your skills, this documentation will provide you with a comprehensive guide to using DDL, DQL, and DML effectively in your database management tasks.</p>
 <h2 id="prerequisite-knowledge-and-skills">Prerequisite Knowledge and Skills</h2>
-<p>Up to this point you should be able to perform the following tasks using mouse in the <a href="glossary/">MySQL workbench</a>:</p>
+<p>Up to this point, you should be able to perform the following tasks using the mouse in the <a href="glossary/">MySQL workbench</a>:</p>
 <ul>
-<li>Create database objects in MySQL workbench</li>
+<li>Create database objects in MySQL Workbench</li>
 <li>Create <a href="glossary/">Entity Relationship Diagrams</a></li>
 <li>Add <a href="glossary/">primary keys</a> and <a href="glossary/">foreign keys</a></li>
 <li>Add <a href="glossary/">constraints</a> to tables</li>
-<li>Familiar to data types in MySQL</li>
+<li>Familiar with data types in MySQL</li>
 </ul>
 <h2 id="software-requirements">Software Requirements</h2>
 <p>While SQL is a widely used language that can be implemented in many software applications, in this documentation, we will specifically focus on using <strong>MySQL Workbench</strong>.</p>
-<p>If you haven't installed MySQL Workbench yet, you can download the latest version (v8.0.32) from link 👉 <a href="https://dev.mysql.com/downloads/workbench/">MySQL Workbench Installation</a>, and follow the installation stpes here 👉 <a href="https://www.simplilearn.com/tutorials/mysql-tutorial/mysql-workbench-installation">Workbench Installation Guide</a></p>
+<p>If you haven't installed MySQL Workbench yet, you can download the latest version (v8.0.32) from the link 👉 <a href="https://dev.mysql.com/downloads/workbench/">MySQL Workbench Installation</a>, and follow the installation steps here 👉 <a href="https://www.simplilearn.com/tutorials/mysql-tutorial/mysql-workbench-installation">Workbench Installation Guide</a></p>
 <h2 id="procedures-overview">Procedures Overview</h2>
 <p>Below is a summary of the main sections covered in this documentation:</p>
 <ul>
@@ -451,7 +451,7 @@
 <h2 id="typography-guidelines">Typography Guidelines</h2>
 <ol>
 <li>
-<p>Code blocks in this documentation may include <strong>clickable notes</strong>. These notes can be helpful if you need further explanation for a particular piece of code that you are unfamiliar with. Below is an example of code block with a clickable note:</p>
+<p>Code blocks in this documentation may include <strong>clickable notes</strong>. These notes can be helpful if you need further explanation for a particular piece of code that you are unfamiliar with. Below is an example of a code block with a clickable note:</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">FULL_NAME</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">person</span><span class="p">;</span><span class="w"> </span><span class="c1">--(1)</span>
 </span></code></pre></div>
 <ol>
@@ -459,7 +459,7 @@
 </ol>
 </li>
 <li>
-<p>Inline commands are presented in a monospace font to distinguish them from regular text: <code>CREATE</code></p>
+<p>Inline commands are presented in a monospace font to distinguish them from the regular text: <code>CREATE</code></p>
 </li>
 <li>
 <p>Instruction screenshots may include red squared rectangles that point to key information or message:
