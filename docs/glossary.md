@@ -12,3 +12,5 @@
 | **Schema**               | In SQL, a schema (also referred as database) is a logical container for database objects such as tables, views, indexes, and procedures. |
 | **Query script**         | A query script is a program or script that is used to retrieve data from a database. It is typically written in a programming language designed for querying databases. In this documentation, it is written in SQL. |
 | **VARCHAR()** | A data type used in a database system to store character string values with a variable length up to a specified maximum limit. |
+
+_Author: Alice_

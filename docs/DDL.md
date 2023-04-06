@@ -12,6 +12,8 @@ By the end of this section, you will have a good understanding of how to use the
 
 The CREATE command is used to create new objects in sql such as schemas, tables, indexes and constraints. Instead of using both mouse and keyboard to create schema, this time we will use only keyboard and type our commands in a [query script_](glossary.md) to create a new schema and table. Let's open MySQL Workbench and get started 🔥!
 
+### CREATE Database
+
 1.  Open Local instance MySQL80 by single clicking the MySQL80 rectangle.
 
     ![Local instance MySQL80](images/Local_instance_MySQL80.png){ width="300" }
@@ -30,6 +32,8 @@ The CREATE command is used to create new objects in sql such as schemas, tables,
     CREATE DATABASE intro_to_sql;
     ```
 
+    This will create a new schema named "intro_to_sql".
+
     !!!Note inline end "Execute Buttons ![Execute Icons](images/execute_icon.png)"
         **Execute button** ![Execute Icons](images/execute_all.png) is used to execute all the commands in the sql file.
 
@@ -37,7 +41,7 @@ The CREATE command is used to create new objects in sql such as schemas, tables,
 
 4.  Click Execute button ![Execute Icons](images/execute_one.png).
 
-    After execute a success message will display in the "Output" section on the bottom of your Workbench.
+    After execute a success message **"CREATE DATABASE intro_to_sql"** will display in the "Output" - "Action Output" section on the bottom of your Workbench.
 
     ![success message](images/create_db_success_message.png){ width="400" }
 
@@ -92,13 +96,14 @@ Good Job 🎉! You just created a new table using DDL CREATE command.
 
       For example, the following two queries are equivalent:
 
-**insert little reference inside code!**
-
-The "id" column is the primary key, and the "name" column is required (NOT NULL).
-
-1. Click Execute icon.
-
-In this example, we are creating a table named "customers" with four columns: "id", "name", "email", and "age". The "id" column is the primary key, and the "name" column is required (NOT NULL).
+      ```sql
+      SELECT * FROM employee;
+      ```
+      and
+      ```sql
+      select * from employee;
+      ```
+      However, uppercase letters are commonly used for **keywords**, such as CREATE, ALTER, DROP, SELECT, INSERT, etc. In this documentation, we will follow this rule and use uppercase letters for all keywords.
 
 ## ALTER Command
 
@@ -132,25 +137,29 @@ In this example, we deleted both "AGE" column and "BIRTH_DATE" column in "employ
 
 ![dropped age and birthdate columns](images/drop_age_bd.png){width="400"}
 
-Now let's try some dangerous commands. Create a new schema called "test_drop", set it as default, and create a table called "test" in this schema.
+Now let's try some dangerous commands. 
 
-```sql
-CREATE DATABASE test_drop;
-USE test_drop;
-CREATE TABLE `test` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `description` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`)
-);
-```
+1. Type and execute the command below:
 
-Then type and execute the command below:
+    ```sql
+    CREATE DATABASE test_drop;
+    USE test_drop;
+    CREATE TABLE `test` (
+      `id` INT NOT NULL AUTO_INCREMENT,
+      `description` VARCHAR(45) NOT NULL,
+      PRIMARY KEY (`id`)
+    );
+    ```
+    
+    This would create a new schema called "test_drop" for us to test DROP command, set it as default, and create a table called "test" in this schema.
 
-```sql
-DROP DATABASE test_drop;
-```
+2. Then type and execute the command below:
 
-Your "test*drop" schema including the "test" table is permanently deleted without any warning message* when you execute the above command.
+    ```sql
+    DROP DATABASE test_drop;
+    ```
+
+Your "test_drop" schema including the "test" table is permanently deleted without any warning message* when you execute the above command.
 
 !!! danger
 
@@ -168,3 +177,5 @@ We hope this section has been helpful with your learning journey on the followin
 In the next section, we will go through SQL DML commands, which are used to manipulate data in the database. With these commands, you can retrieve, insert, update, and delete data from your database.
 
 Let's continue learning! 👉 **[DML](DML.md)**
+
+_Author: Alice_

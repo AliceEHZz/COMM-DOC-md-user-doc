@@ -39,7 +39,7 @@ Up to this point you should be able to perform the following tasks using mouse i
 
 While SQL is a widely used language that can be implemented in many software applications, in this documentation, we will specifically focus on using **MySQL Workbench**.
 
-If you haven't installed MySQL Workbench yet, you can download the latest version (v8.0.32) from link 👉 [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+If you haven't installed MySQL Workbench yet, you can download the latest version (v8.0.32) from link 👉 [MySQL Workbench Installation](https://dev.mysql.com/downloads/workbench/), and follow the installation stpes here 👉 [Workbench Installation Guide](https://www.simplilearn.com/tutorials/mysql-tutorial/mysql-workbench-installation)
 
 ## Procedures Overview
 
@@ -66,7 +66,7 @@ Below is a summary of the main sections covered in this documentation:
 3. Instruction screenshots may include red squared rectangles that point to key information or message:
     <figure markdown>
     ![convention screenshot example](images/convention_eg.png){width="400"}
-    <figcaption>A successful message is pointed by the red rectangle</figcaption>
+    <figcaption>A success message in the "Output" - "Action Output" section is bordered by a red rectangle</figcaption>
     </figure>
 
 4. Message blocks are used to draw your attention to relevant information:
@@ -85,3 +85,4 @@ Below is a summary of the main sections covered in this documentation:
 
 Now let's start with our first SQL component 👉 **[DDL](DDL.md)**
 
+_Author: Alice_
