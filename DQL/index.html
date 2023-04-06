@@ -253,21 +253,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../SQLintroduction/" class="md-nav__link">
-        Introduction to SQL
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../DDL/" class="md-nav__link">
         DDL
       </a>
@@ -333,24 +318,24 @@
       
         <li class="md-nav__item">
   <a href="#select-all-data" class="md-nav__link">
-    SELECT all data
+    SELECT All Data
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#select-specific-columns" class="md-nav__link">
-    SELECT specific columns
+    SELECT Specific Columns
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#select-computed-columns" class="md-nav__link">
-    SELECT computed columns
+    SELECT Computed Columns
   </a>
   
-    <nav class="md-nav" aria-label="SELECT computed columns">
+    <nav class="md-nav" aria-label="SELECT Computed Columns">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -436,7 +421,7 @@
 
 
 <h1 id="data-query-language-dql">Data Query Language (DQL)</h1>
-<p>➡️The goal of this document is to serve as an introduction to querying a database using the <code>SELECT</code> statement. The <code>SELECT</code> statement has a number of parts and can perform many different tasks for retrieving data from the database.</p>
+<p>The goal of this document is to serve as an introduction to querying a database using the <code>SELECT</code> statement. The <code>SELECT</code> statement has a number of parts and can perform many different tasks for retrieving data from the database.</p>
 <p>A <code>SELECT</code> statement has the following parts or clauses:</p>
 <ul>
 <li><code>FROM</code></li>
@@ -446,16 +431,15 @@
 <li><code>ORDER BY</code></li>
 </ul>
 <p>Each clause in the <code>SELECT</code> statement (aside from <code>SELECT</code> itself) is optional. The individual optional clauses can be combined or omitted as needed.</p>
-<p>Although the <code>SELECT</code> statement can retrieve data from multiple tables at once, in this section we will focus on retrieving different types of data from a single table using only <code>SELECT</code> and <code>FROM</code>.🚩</p>
+<p>Although the <code>SELECT</code> statement can retrieve data from multiple tables at once, in this section we will focus on retrieving different types of data from a single table using only <code>SELECT</code> and <code>FROM</code>.</p>
 <p>By completing this section, you will know how to properly use the <code>SELECT</code> statement only comes from practice and with experience in a wide variety of scenarios.</p>
-<h2 id="select-all-data">SELECT all data</h2>
+<h2 id="select-all-data">SELECT All Data</h2>
 <p><code>SELECT</code> and show all rows and all columns from a single table is one of the simplest <code>SELECT</code> statements implementing only 1 of the optional clauses - the <code>FROM</code> clause.</p>
 <p>Right after the SELECT keyword we use an asterisk <code>*</code> to indicate all of the columns.</p>
 <p>The syntax for this scenario is shown below:</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="k">table</span><span class="o">&gt;</span><span class="p">;</span>
 </span></code></pre></div>
-<p>Let's see all the rows and columns for the employee table.
-Copy and execute</p>
+<p>Let's see all the rows and columns for the employee table. Type and execute:</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">employee</span><span class="p">;</span>
 </span></code></pre></div>
 <p>✔️You should get back all 4 employee rows and all 5 columns (EMP_ID, FIRST_NAME, LAST_NAME, SALARY, BONUS).</p>
@@ -464,18 +448,19 @@ Copy and execute</p>
 <p class="admonition-title">Info</p>
 <p>Remember that, although UPPERCASE and lowercase are both permitted, by convention we use UPPERCASE for <code>SELECT</code> keyword clauses like <code>SELECT</code> and <code>FROM</code>. This helps us with readability.</p>
 </div>
-<h2 id="select-specific-columns">SELECT specific columns</h2>
+<h2 id="select-specific-columns">SELECT Specific Columns</h2>
+<p>The syntax for this scenario is shown below:</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="p">(</span><span class="n">column1</span><span class="p">,</span><span class="n">column2</span><span class="err">…</span><span class="p">)</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="k">table</span><span class="o">&gt;</span><span class="p">;</span>
 </span></code></pre></div>
 <p>Let's try this using employee table. We want to get back the employee names (last and first) and their salary.</p>
-<p>Copy and execute the following command:</p>
+<p>Type and execute the following command:</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">FIRST_NAME</span><span class="p">,</span><span class="w"> </span><span class="n">LAST_NAME</span><span class="p">,</span><span class="w"> </span><span class="n">SALARY</span><span class="w"> </span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employee</span><span class="p">;</span>
 </span></code></pre></div>
 <p>✔️You should get back all 4 employees rows but only 3 columns (FIRST_NAME, LAST_NAME, SALARY).</p>
 <p><img alt="Image title" src="../images/select_specific_cols.png" /></p>
-<h2 id="select-computed-columns">SELECT computed columns</h2>
+<h2 id="select-computed-columns">SELECT Computed Columns</h2>
 <p>We can retrieve all the rows from a table and some of the columns, but those columns could include a calculation to compute a derived value.
 Remember derived values are derived from other columns and/or functions.</p>
 <h3 id="concat">CONCAT</h3>
@@ -484,7 +469,7 @@ Remember derived values are derived from other columns and/or functions.</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="k">table</span><span class="o">&gt;</span><span class="p">;</span>
 </span></code></pre></div>
 <p>In the result, MySQL doesn't know what to call the column and so it names it based on the function we used. We can easily fix this, by giving the column an alias. An alias is just a nickname for the column so it looks better in the result.</p>
-<p>Copy and execute</p>
+<p>Copy and execute:</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">CONCAT</span><span class="p">(</span><span class="n">FIRST_NAME</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="n">LAST_NAME</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="ss">&quot;Full Name&quot;</span><span class="w"> </span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">employee</span><span class="p">;</span>
 </span></code></pre></div>
@@ -503,6 +488,7 @@ Remember derived values are derived from other columns and/or functions.</p>
 <p>✔️ This gives us the total for each employee in the employee table by calculating the salary plus the bonus.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>😀 We hope this section has been helpful with your deep learning on the <code>SELECT</code> commands. You can retrieve and manipulate the data you get from the databases. There are more options of the <code>SELECT</code> clauses, such as <code>WHERE</code>, <code>GROUP BY</code>, and <code>ORDER BY</code> for you to explore.</p>
+<p><em>Author: Xiao</em></p>
 
 
 
