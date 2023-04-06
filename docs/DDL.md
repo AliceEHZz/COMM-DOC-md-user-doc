@@ -10,7 +10,7 @@ By the end of this section, you will have a good understanding of how to use the
 
 ## CREATE Command
 
-The CREATE command is used to create new objects in sql such as schemas, tables, indexes and constraints. Instead of using both mouse and keyboard to create schema, this time we will use only keyboard and type our commands in a [query script_](glossary.md) to create a new schema and table. Let's open MySQL Workbench and get started 🔥!
+The CREATE command is used to create new objects in SQL such as schemas, tables, indexes and constraints. Instead of using both mouse and keyboard to create a schema, this time we will use only keyboard and type our commands in a [query script](glossary.md) to create a new schema and table. Let's open MySQL Workbench and get started 🔥!
 
 ### CREATE Database
 
@@ -37,11 +37,11 @@ The CREATE command is used to create new objects in sql such as schemas, tables,
     !!!Note inline end "Execute Buttons ![Execute Icons](images/execute_icon.png)"
         **Execute button** ![Execute Icons](images/execute_all.png) is used to execute all the commands in the sql file.
 
-        **Cursor Execute button** ![Execute Icons](images/execute_one.png) is used to to run a single command where the keyboard cursor is. The keyboard shortcut for this is CTRL + Enter on Windows or CMD+Enter (⌘+Enter) on Mac.
+        **Cursor Execute button** ![Execute Icons](images/execute_one.png) is used to run a single command where the keyboard cursor is. The keyboard shortcut for this is CTRL + Enter on Windows or CMD+Enter (⌘+Enter) on Mac.
 
 4.  Click Execute button ![Execute Icons](images/execute_one.png).
 
-    After execute a success message **"CREATE DATABASE intro_to_sql"** will display in the "Output" - "Action Output" section on the bottom of your Workbench.
+    After executing a success message **"CREATE DATABASE intro_to_sql"** will display in the "Output" - "Action Output" section on the bottom of your Workbench.
 
     ![success message](images/create_db_success_message.png){ width="400" }
 
@@ -49,7 +49,7 @@ The CREATE command is used to create new objects in sql such as schemas, tables,
 
     ![refresh schema](images/refresh_db.png){ width="300" }
 
-6.  Type the commands below and execute it to set "intro_to_sql" as the default schema:
+6.  Type and execut the commands below to set "intro_to_sql" as the default schema:
 
     ```sql
     USE intro_to_sql;
@@ -82,9 +82,9 @@ CREATE TABLE `employee` ( --(1)
 2. This code will make a column called "EMP_ID" that's an integer (INT), required (NOT NULL), and increases automatically(AUTO_INCREMENT).
 3. This code will make a column called "FIRST_NAME" that's a string with length <=45 ([VARCHAR(45)](glossary.md)) and can't be empty.
 4. This code will make a column called "SALARY" that's an integer and can't be empty.
-5. This code will set "EMP_ID" as primary key.
+5. This code will set "EMP_ID" as the primary key.
 
-Refresh schema list in the navigator, and you will see the employee table under "intro_to_sql" schema. And a success message is shown in the "Output" section.
+Refresh the schema list in the navigator, and you will see the employee table under "intro_to_sql" schema. And a success message is shown in the "Output" section.
 
 ![new table created](images/table_created.png){ width="500" }
 
@@ -92,7 +92,7 @@ Good Job 🎉! You just created a new table using DDL CREATE command.
 
 ??? Note
 
-      In SQL, by default, most commands are not case sensitive. This means that you can use uppercase or lowercase letters interchangeably when writing commands or queries, and SQL will treat them the same way.
+      In SQL, by default, most commands are not case-sensitive. This means that you can use uppercase or lowercase letters interchangeably when writing commands or queries, and SQL will treat them the same way.
 
       For example, the following two queries are equivalent:
 
@@ -107,7 +107,7 @@ Good Job 🎉! You just created a new table using DDL CREATE command.
 
 ## ALTER Command
 
-The ALTER command is used to modify the structure of existing database objects. It can add, delete, or modify columns and constraints in a table. In the example below, we will use ALTER to add columns to "employee" table.
+The ALTER command is used to modify the structure of existing database objects. It can add, delete, or modify columns and constraints in a table. In the example below, we will use ALTER to add columns to the "employee" table.
 
 Type and execute the commands below:
 
@@ -133,7 +133,7 @@ DROP COLUMN BIRTH_DATE,
 DROP COLUMN AGE;
 ```
 
-In this example, we deleted both "AGE" column and "BIRTH_DATE" column in "employee" table.
+In this example, we deleted both "AGE" column and "BIRTH_DATE" column in the "employee" table.
 
 ![dropped age and birthdate columns](images/drop_age_bd.png){width="400"}
 
@@ -151,7 +151,7 @@ Now let's try some dangerous commands.
     );
     ```
     
-    This would create a new schema called "test_drop" for us to test DROP command, set it as default, and create a table called "test" in this schema.
+    This would create a new schema called "test_drop" for us to test the `DROP` command, set it as default, and create a table called "test" in this schema.
 
 2. Then type and execute the command below:
 
@@ -163,13 +163,13 @@ Your "test_drop" schema including the "test" table is permanently deleted withou
 
 !!! danger
 
-       DROP DATABASE command deletes the database and all its tables and data. It will delete the specified object _permanently_, so use it with caution.
+       The ```DROP DATABASE``` command deletes the database and all its tables and data. It will delete the specified object _permanently_, so use it with caution.
 
 ## Conclusion
 
 We hope this section has been helpful with your learning journey on the following:
 
-- [x] Using CREATE to create a new database objects such as schema, table and column
+- [x] Using CREATE to create new database objects such as schema, table and column
 - [x] Using USE to set a schema to default
 - [x] Using ALTER to modify the database objects
 - [x] Using DROP to delete database objects

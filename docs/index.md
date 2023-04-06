@@ -2,7 +2,7 @@
 
 👋 Welcome to this documentation on [DDL](DDL.md), [DQL](DQL.md), and [DML](DML.md) - three essential components of the Structured Query Language (SQL) language that are used to manage [relational databases](glossary.md). By reading this document, you will gain an understanding of the basics of SQL syntax that are common to all relational databases, and learn how to perform common operations on a database using SQL. So, let's dive into the world of SQL!
 
-> **SQL** is a standard language for storing, manipulating and retrieving data in databases. Apart from querying data, the language serves several other purposes on database management operation, such as creating, modifying, and removing records or [database objects](glossary.md), defining relationships between objects and setting constraints.
+> **SQL** is a standard language for storing, manipulating, and retrieving data in databases. Apart from querying data, the language serves several other purposes in database management operations, such as creating, modifying, and removing records or [database objects](glossary.md), defining relationships between objects, and setting constraints.
 >
 > Therefore, the language is multi-functional, enabling developers to carry out various data manipulation and management tasks within a database.
 >
@@ -27,19 +27,19 @@ Whether you are a complete newcomer to SQL or a seasoned developer looking to en
 
 ## Prerequisite Knowledge and Skills
 
-Up to this point you should be able to perform the following tasks using mouse in the [MySQL workbench](glossary.md):
+Up to this point, you should be able to perform the following tasks using the mouse in the [MySQL workbench](glossary.md):
 
-- Create database objects in MySQL workbench
+- Create database objects in MySQL Workbench
 - Create [Entity Relationship Diagrams](glossary.md)
 - Add [primary keys](glossary.md) and [foreign keys](glossary.md)
 - Add [constraints](glossary.md) to tables
-- Familiar to data types in MySQL
+- Familiar with data types in MySQL
 
 ## Software Requirements
 
 While SQL is a widely used language that can be implemented in many software applications, in this documentation, we will specifically focus on using **MySQL Workbench**.
 
-If you haven't installed MySQL Workbench yet, you can download the latest version (v8.0.32) from link 👉 [MySQL Workbench Installation](https://dev.mysql.com/downloads/workbench/), and follow the installation stpes here 👉 [Workbench Installation Guide](https://www.simplilearn.com/tutorials/mysql-tutorial/mysql-workbench-installation)
+If you haven't installed MySQL Workbench yet, you can download the latest version (v8.0.32) from the link 👉 [MySQL Workbench Installation](https://dev.mysql.com/downloads/workbench/), and follow the installation steps here 👉 [Workbench Installation Guide](https://www.simplilearn.com/tutorials/mysql-tutorial/mysql-workbench-installation)
 
 ## Procedures Overview
 
@@ -53,7 +53,7 @@ Below is a summary of the main sections covered in this documentation:
 
 ## Typography Guidelines
 
-1. Code blocks in this documentation may include **clickable notes**. These notes can be helpful if you need further explanation for a particular piece of code that you are unfamiliar with. Below is an example of code block with a clickable note:
+1. Code blocks in this documentation may include **clickable notes**. These notes can be helpful if you need further explanation for a particular piece of code that you are unfamiliar with. Below is an example of a code block with a clickable note:
 
     ```sql
     SELECT FULL_NAME FROM person; --(1)
@@ -61,7 +61,7 @@ Below is a summary of the main sections covered in this documentation:
 
     1. Shows all rows in the "FULL_NAMe" column from the person table
 
-2. Inline commands are presented in a monospace font to distinguish them from regular text: `CREATE`
+2. Inline commands are presented in a monospace font to distinguish them from the regular text: `CREATE`
 
 3. Instruction screenshots may include red squared rectangles that point to key information or message:
     <figure markdown>
