@@ -1,7 +1,6 @@
 site_name: SQL Introduction
 nav:
   - Home: "index.md"
-  - Introduction to SQL: "SQLintroduction.md"
   - DDL: "DDL.md"
   - DML: "DML.md"
   - DQL: "DQL.md"
@@ -45,6 +44,7 @@ theme:
     - toc.integrate
     - content.code.copy
     - content.code.annotate
+
 
 markdown_extensions:
   - admonition

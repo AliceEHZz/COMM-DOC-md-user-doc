@@ -9,4 +9,5 @@
 | Data too long for column 'columnname' | This error occurs when the value being inserted into a column exceeds the maximum length of the column.  | To resolve this issue, either increase the maximum length of the column or truncate the value being inserted to fit within the maximum length. |
 | Duplicate entry 'value' for key 'index_name | The value you are trying to insert or update violates a unique key constraint. | Check that the value is unique and not already present in the database. If it is a duplicate, modify the value or delete the existing record before inserting the new one. |
 | Tablespace is full |The tablespace or disk where the database is stored is full. |Free up space on the tablespace or disk by deleting old data or increasing the storage capacity. You can also move the database to a different tablespace or disk.|
-<!-- | Unable to install MySQL | xx               | xx            | -->
+
+_Author: Xiao_
