@@ -84,3 +84,4 @@ Below is a summary of the main sections covered in this documentation:
         indicates error message information or provides tips that can help users troubleshoot common issues.
 
 Now let's start with our first SQL component 👉 **[DDL](DDL.md)**
+

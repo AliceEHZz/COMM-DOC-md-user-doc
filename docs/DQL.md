@@ -110,8 +110,8 @@ FROM employee;
 
 ![Image title](./images/select_cal.png)
 
-✔️This gives us the total for each employee in the employee table by calculating the salary plus the bonus.
+✔️ This gives us the total for each employee in the employee table by calculating the salary plus the bonus.
 
 ## Conclusion
 
-😀We hope this section has been helpful with your deep learning on the ```SELECT``` commands. You can retrieve and manipulate the data you get from the databases. There are more options of the ```SELECT``` clauses, such as ```WHERE```, ```GROUP BY```, and ```ORDER BY``` for you to explore.
+😀 We hope this section has been helpful with your deep learning on the ```SELECT``` commands. You can retrieve and manipulate the data you get from the databases. There are more options of the ```SELECT``` clauses, such as ```WHERE```, ```GROUP BY```, and ```ORDER BY``` for you to explore.
