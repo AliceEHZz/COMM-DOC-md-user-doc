@@ -1,53 +1,86 @@
-# Documentation Introduction
+# Introduction
 
-<!-- 
-- Explains software’s intended use
-- Identifies intended user & knowledge level
-- Shows conventions used in document
-- States what instructions are for 
--->
+👋 Welcome to this documentation on [DDL](DDL.md), [DQL](DQL.md), and [DML](DML.md) - three essential components of the Structured Query Language (SQL) language that are used to manage [relational databases](glossary.md). By reading this document, you will gain an understanding of the basics of SQL syntax that are common to all relational databases, and learn how to perform common operations on a database using SQL. So, let's dive into the world of SQL!
 
-The goal of this document is to serve as an introduction to basic SQL commands that Relational Databases share.
+> **SQL** is a standard language for storing, manipulating and retrieving data in databases. Apart from querying data, the language serves several other purposes on database management operation, such as creating, modifying, and removing records or [database objects](glossary.md), defining relationships between objects and setting constraints.
+>
+> Therefore, the language is multi-functional, enabling developers to carry out various data manipulation and management tasks within a database.
+>
+> SQL commands are classified into five categories based on their purpose:
+>
+> - **Data Definition Language (DDL)** - used to define the database schema and structure (`CREATE`, `ALTER`, `DROP`).
+> - **Data Manipulation Language (DML)** - used to manipulate data within the database (`INSERT`, `UPDATE`, `DELETE`).
+> - **Data Query Language (DQL)** - used to retrieve data from the database (`SELECT`).
+> - **Data Control Language (DCL)** - used to control access to the database (`GRANT`, `REVOKE`).
+> - **Transaction Control Language (TCL)** - used to manage database transactions (`COMMIT`, `ROLLBACK`, `SAVEPOINT`).
 
-SQL, or Structured Query Language, is a programming language used to manage and manipulate relational databases. With SQL, you can create, update, and delete data in databases, as well as retrieve data for analysis and reporting. SQL is widely used in industries such as finance, healthcare, and e-commerce, and is a valuable skill for anyone working with data. In this documentation, you will learn the basics of SQL syntax and how to perform common operations on a database using SQL.
-
-
-We will cover some different types of SQL commands such us DDL, DML, and DQL. Please follow the instruction and try those out!
+In this documentation, we will be focusing specifically on the first three categories of SQL commands: DDL, DML, and DQL. These categories are particularly important for building and managing relational databases, as they allow you to define the structure of your database, retrieve data from it, and manipulate that data as needed.
 
 ## Intended Users
 
-(TBModify) This documentation is targeted towards the following users:
+This documentation is aimed at two main groups of users:
 
-- Beginner developers who need to setup a backend for a personal project.
-- Software development teams working on small or medium-sized web applications.
+- Relational database beginners who are just starting to learn SQL and want to gain a deeper understanding of the language.
+- Software development teams working on small or medium-sized web applications, who want to improve their skills in using SQL for building and managing databases.
+
+Whether you are a complete newcomer to SQL or a seasoned developer looking to enhance your skills, this documentation will provide you with a comprehensive guide to using DDL, DQL, and DML effectively in your database management tasks.
+
+## Prerequisite Knowledge and Skills
+
+Up to this point you should be able to perform the following tasks using mouse in the [MySQL workbench](glossary.md):
+
+- Create database objects in MySQL workbench
+- Create [Entity Relationship Diagrams](glossary.md)
+- Add [primary keys](glossary.md) and [foreign keys](glossary.md)
+- Add [constraints](glossary.md) to tables
+- Familiar to data types in MySQL
 
 ## Software Requirements
 
-**MySQL 8.0**
+While SQL is a widely used language that can be implemented in many software applications, in this documentation, we will specifically focus on using **MySQL Workbench**.
 
-Please follow the instructions from: <https://dev.mysql.com/downloads/mysql/>
-
-## Prerequisite knowledges
-
-Up to this point you should be able to perform the following tasks using the MySQL Workbench:
-
-- Create Tables in MySQL workbench
-- Entity Relationship Diagrams
-- Add primary keys and foreign keys
-- Add constraints to tables
+If you haven't installed MySQL Workbench yet, you can download the latest version (v8.0.32) from link 👉 [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 
 ## Procedures Overview
 
-This SQL documentation provides a basic overview of some of the most commonly used SQL commands for data manipulation and retrieval. The documentation includes the following sections:
+Below is a summary of the main sections covered in this documentation:
 
-Data Definition Language (DDL) commands: This section covers basic SQL commands for creating and modifying database objects such as tables, indexes, and views.
+- **[DDL](DDL)**
+- **[DML](DML)**
+- **[DQL](DQL)**
+- **[Troubleshooting](troubleshooting)**
+- **[Glossary](glossary)**
 
-Data Manipulation Language (DML) commands: This section covers basic SQL commands for inserting, updating, and deleting data in tables.
+## Typography Guidelines
 
-Data Query Language (DQL) commands: This section covers basic SQL commands for retrieving data from tables using the SELECT statement.
+1. Code blocks in this documentation may include **clickable notes**. These notes can be helpful if you need further explanation for a particular piece of code that you are unfamiliar with. Below is an example of code block with a clickable note:
 
-The documentation provides clear explanations of each command and includes examples to help you understand how to use them in your own SQL queries.
+    ```sql
+    SELECT FULL_NAME FROM person; --(1)
+    ```
 
-## Typographical Conventions
+    1. Shows all rows in the "FULL_NAMe" column from the person table
 
+2. Inline commands are presented in a monospace font to distinguish them from regular text: `CREATE`
 
+3. Instruction screenshots may include red squared rectangles that point to key information or message:
+    <figure markdown>
+    ![convention screenshot example](images/convention_eg.png){width="400"}
+    <figcaption>A successful message is pointed by the red rectangle</figcaption>
+    </figure>
+
+4. Message blocks are used to draw your attention to relevant information:
+
+    !!! note
+
+        indicates important knowledge that needs to be addressed or communicated to the user.
+
+    !!! danger
+
+        indicates a potentially dangerous command or action that must be used with caution to avoid uncoverable results.
+
+    !!! tip
+
+        indicates error message information or provides tips that can help users troubleshoot common issues.
+
+Now let's start with our first SQL component 👉 **[DDL](DDL.md)**
