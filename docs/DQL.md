@@ -116,3 +116,5 @@ FROM employee;
 ## Conclusion
 
 😀We hope this section has been helpful with your deep learning on the ```SELECT``` commands. You can retrieve and manipulate the data you get from the databases. There are more options for the ```SELECT``` clauses, such as ```WHERE```, ```GROUP BY```, and ```ORDER BY``` for you to explore.
+
+_Author: Xiao_
