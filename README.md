@@ -1,4 +1,4 @@
-# Overview of SQL Introduction Documentation
+# Overview of Introduction of SQL Fundamentals
 
 👋 Welcome to our documentation on SQL Fundamentals. In this documentation, I will guide you through three basic components of SQL:
 
