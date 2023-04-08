@@ -38,7 +38,7 @@ SELECT * FROM employee;
 
 ![Image title](./images/select_all.png)
 
-!!! info
+!!! note
 
     Remember that, although UPPERCASE and lowercase are both permitted, by convention we use UPPERCASE for ```SELECT``` keyword clauses like ```SELECT``` and ```FROM```. This helps us with readability.
 

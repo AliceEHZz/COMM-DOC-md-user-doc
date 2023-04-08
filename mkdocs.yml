@@ -1,4 +1,4 @@
-site_name: SQL Introduction
+site_name: Introduction to SQL Fundamentals
 nav:
   - Home: "index.md"
   - DDL: "DDL.md"
@@ -8,7 +8,7 @@ nav:
   - Glossary: "glossary.md"
 
 repo_url: https://github.com/AliceEHZz/COMM-SQL-Introduction
-repo_name: SQL Introduction
+repo_name: SQL Fundamentals Introduction
 
 theme:
   name: material

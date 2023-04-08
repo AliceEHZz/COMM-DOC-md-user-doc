@@ -75,6 +75,10 @@ Below is a summary of the main sections covered in this documentation:
 
         indicates important knowledge that needs to be addressed or communicated to the user.
 
+    !!! warning
+
+        indicates a potentially hazardous command or action that could have negative consequences, but may not necessarily result in irreversible damage.
+
     !!! danger
 
         indicates a potentially dangerous command or action that must be used with caution to avoid uncoverable results.
